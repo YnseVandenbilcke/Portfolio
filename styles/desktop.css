@@ -1,3 +1,18 @@
+@font-face {
+  font-family: PublicSansBold;
+  src: url(/fonts/PublicSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: PublicSansLight;
+  src: url(/fonts/PublicSans-Light.ttf);
+}
+
+@font-face {
+  font-family: PublicSansExtraLight;
+  src: url(/fonts/PublicSans-ExtraLight.ttf);
+}
+
 body {
-  background-color: red;
+  background-color: #202020;
 }

@@ -82,6 +82,60 @@ const loadAllCircles = () => {
   }, 900)
 }
 
+const pullseCircles = (frontendCircle, reactCircle, phpCircle, pyhtonCircle) => {
+  let circleArray = [frontendCircle, reactCircle, phpCircle, pyhtonCircle];
+  for(const circle of circleArray){
+    setInterval(function(){
+      circle.classList.toggle('pulsate-fwd');
+    }, 2000)
+  }
+}
+
+const listenToCircles = (frontendCircle, reactCircle, phpCircle, pythonCircle) => {
+  let circleArray = [frontendCircle, reactCircle, phpCircle, pythonCircle];
+  for(const circle of circleArray){
+    circle.addEventListener('click', function(){
+      circleClick(circle);
+    })
+  }
+}
+
+const circleClick = (circle) => {
+  console.log(circle);
+  let modal = document.querySelector('.c-skills__modal');
+  modal.style.display = "flex";
+  let imagePath = "";
+  switch(circle.className){
+    case 'c-skills__frontend_circle':
+      imagePath = "/assets/SpotifyRemake.png";
+      break;
+    case 'c-skills__react_circle':
+      imagePath = "/assets/InstagramRemake.png";
+      break;
+    case 'c-skills__php_circle':
+      imagePath = "/assets/Trello.png";
+      break;
+    case 'c-skills__python_circle':
+      imagePath = "python";
+      break;
+  }
+  addImageToModal(imagePath);
+}
+
+const closeModal = () => {
+  let closeButton = document.querySelector('.c-skills__close');
+  closeButton.addEventListener('click', function(){
+    document.querySelector('.c-skills__modal').style.display = "none";
+  })
+}
+
+const addImageToModal = (imagePath) => {
+  let modalImage = document.querySelector('.c-skills__modal-content');
+  modalImage.innerHTML = `
+    <img src="${imagePath}" alt="${imagePath}">
+  `
+}
+
 const openMenu = () => {
   document.querySelector('.c-nav__overlay').style.height = "100%";
 }
@@ -111,6 +165,9 @@ const init = () => {
   }
   if(html_skills){
     loadAllCircles();
+    pullseCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
+    listenToCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
+    closeModal();
   }
 }
 
