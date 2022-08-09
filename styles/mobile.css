@@ -627,4 +627,21 @@ body{
 /* End styling for skills.html */
 
 /* Start styling for portfolio.html */
+.c-portfolio_text h1{
+  color: #2CFED6;
+  font-size: 32px;
+  font-family: PublicSansBold;
+  padding: 16px 0 16px 0;
+}
+
+.c-portfolio_text p{
+  color: #FFFFFF;
+  font-size: 16px;
+  font-family: PublicSansLight;
+}
+
+.c-portfolio_text a{
+  text-decoration: none;
+  color: #ee3557;
+}
 /* End styling for portfolio.html */
