@@ -1,16 +1,16 @@
 @font-face {
   font-family: PublicSansBold;
-  src: url(/fonts/PublicSans-Bold.ttf);
+  src: url(../fonts/PublicSans-Bold.ttf);
 }
 
 @font-face {
   font-family: PublicSansLight;
-  src: url(/fonts/PublicSans-Light.ttf);
+  src: url(../fonts/PublicSans-Light.ttf);
 }
 
 @font-face {
   font-family: PublicSansExtraLight;
-  src: url(/fonts/PublicSans-ExtraLight.ttf);
+  src: url(../fonts/PublicSans-ExtraLight.ttf);
 }
 
 body{
