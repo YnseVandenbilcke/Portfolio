@@ -15,6 +15,7 @@
 
 body {
   background-color: #202020;
+  overflow: hidden;
 }
 
 /* Styling for all html files */
@@ -47,7 +48,7 @@ body {
   left: 0;
   top: 0;
   background-color: #202020;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: 0.5s;
 }
 
