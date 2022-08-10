@@ -1,4 +1,4 @@
-let html_index_text, progressbar, html_all_a_tags, html_canvas, html_skills;
+let html_index_text, progressbar, html_all_a_tags, html_canvas, html_skills, html_contact;
 
 const randomNumbers = (min, max) => {
   return (Math.random() * max) + min;
@@ -157,6 +157,7 @@ const init = () => {
   html_all_a_tags = document.querySelectorAll('.js-a');
   html_canvas = document.querySelector('.c-canvas_container'); // Check if we are on index.html
   html_skills = document.querySelector('.c-skills_text'); // Check if we are on skills.html
+  html_contact = document.querySelector('.c-contact__text');
   listenToMenuButtonOpen();
   listenToMenuButtonClose();
   listenToAllATags();
@@ -177,8 +178,10 @@ const init = () => {
       closeModal();
     }
   }
-  if(!window.mobileCheck()){
-    setMap()
+  if(html_contact){
+    if(!window.mobileCheck){
+      setMap()
+    }
   }
 }
 
