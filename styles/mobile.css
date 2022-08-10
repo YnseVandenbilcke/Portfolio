@@ -387,6 +387,10 @@ body{
 .c-canvas_container {
   margin-top: 16px;
 }
+
+#map {
+  display: none;
+}
 /* End styling for contact.html */
 
 /* Start styling for skills.html */
@@ -623,6 +627,10 @@ body{
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.c-skills_text img{
+  display: none;
 }
 /* End styling for skills.html */
 

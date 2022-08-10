@@ -135,6 +135,16 @@ const closeMenu = () => {
   document.querySelector('.c-nav__overlay').style.height = "0%";
 }
 
+const setMap = () => {
+  let map = L.map('map').setView([50.851250, 2.884190], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '© OpenStreetMap'
+  }).addTo(map);
+  let marker = L.marker([50.851250, 2.884190]).addTo(map);
+  marker.bindPopup("<b>Ynse Vandenbilcke</b><br>Ypres, Belgium<br>@: ynse.vandenbilcke@icloud.com").openPopup();
+}
+
 const init = () => {
   window.mobileCheck = function() {
     let check = false;
@@ -165,8 +175,10 @@ const init = () => {
       pullseCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
       listenToCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
       closeModal();
-    } else {
     }
+  }
+  if(!window.mobileCheck()){
+    setMap()
   }
 }
 
