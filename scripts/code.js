@@ -145,6 +145,13 @@ const setMap = () => {
   marker.bindPopup("<b>Ynse Vandenbilcke</b><br>Ypres, Belgium<br>@: ynse.vandenbilcke@icloud.com").openPopup();
 }
 
+const listenToSubmit = () => {
+  let contactFormButton = document.querySelector('.c-contact_form__button');
+  contactFormButton.addEventListener('click', function(){
+    alertify.error('Contact me via email at: ynse.vandenbilcke@icloud.com');
+  })
+}
+
 const init = () => {
   window.mobileCheck = function() {
     let check = false;
@@ -157,7 +164,7 @@ const init = () => {
   html_all_a_tags = document.querySelectorAll('.js-a');
   html_canvas = document.querySelector('.c-canvas_container'); // Check if we are on index.html
   html_skills = document.querySelector('.c-skills_text'); // Check if we are on skills.html
-  html_contact = document.querySelector('.c-contact__text');
+  html_contact = document.querySelector('.c-contact_text');
   listenToMenuButtonOpen();
   listenToMenuButtonClose();
   listenToAllATags();
@@ -171,7 +178,7 @@ const init = () => {
     }
   }
   if(html_skills){
-    if(window.mobileCheck()){
+    if(window.mobileCheck()){ // Check if we are on mobile
       loadAllCircles();
       pullseCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
       listenToCircles(document.querySelector('.c-skills__frontend_circle'), document.querySelector('.c-skills__react_circle'), document.querySelector('.c-skills__php_circle'), document.querySelector('.c-skills__python_circle'));
@@ -179,9 +186,10 @@ const init = () => {
     }
   }
   if(html_contact){
-    if(!window.mobileCheck){
+    if(!window.mobileCheck()){ // Check if we are NOT on mobile
       setMap()
     }
+    listenToSubmit();
   }
 }
 

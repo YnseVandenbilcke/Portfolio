@@ -15,6 +15,7 @@
 
 body{
   background-color: #202020;
+  font-family: PublicSansBold;
 }
 
 /* Styling for all html files */
@@ -360,7 +361,7 @@ body{
   font-size: 20px;
 }
 
-.c-contact_text form input[type=submit]{
+.c-contact_form__button{
   -webkit-appearance: none;
   color: #2CFED6;
   background-color: #202020;

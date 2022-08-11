@@ -5,6 +5,16 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles/reset.css">
+  <!-- JavaScript -->
+  <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+  <!-- CSS -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+  <!-- Default theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/default.min.css"/>
+  <!-- Semantic UI theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/semantic.min.css"/>
+  <!-- Bootstrap theme -->
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
   crossorigin=""/>
@@ -14,7 +24,7 @@
   <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
   crossorigin=""></script>
-  <link rel="icon" href="/assets/Logo.png" type="image/x-icon">
+  <link rel="icon" href="assets/Logo.png" type="image/x-icon">
   <script src="scripts/code.js"></script>
   <title>YV | Full Stack Developer</title>
 </head>
@@ -75,7 +85,7 @@
       <h1 class="tracking-in-expand-fwd-top">Contact me</h1>
       <p class="focus-in-expand-fwd">I am interested in freelance opportunities - also interested in fulltime employment. If you have any other request or questions, feel free to use the contact form below!</p>
       <div class="c-contact__map">
-        <form>
+        <form class="js-contactForm">
           <label for="name"></label>
           <input type="text" placeholder="Name" name="name">
           <label for="email"></label>
@@ -84,7 +94,7 @@
           <input type="text" placeholder="Subject" name="subject">
           <label for="message"></label>
           <textarea name="message" rows="3" placeholder="Message"></textarea>
-          <input type="submit" value="Send message!" name="submit">
+          <button type="button" value="Send message!" class="c-contact_form__button">Send message</button>
         </form>
         <div id="map"></div>
       </div>
