@@ -152,6 +152,14 @@ const listenToSubmit = () => {
   })
 }
 
+const pulseIcons = (icons) => {
+  for(const icon of icons){
+    setInterval(function(){
+      icon.classList.toggle('pulsate-fwd');
+    }, 2000)
+  }
+}
+
 const init = () => {
   window.mobileCheck = function() {
     let check = false;
@@ -165,6 +173,7 @@ const init = () => {
   html_canvas = document.querySelector('.c-canvas_container'); // Check if we are on index.html
   html_skills = document.querySelector('.c-skills_text'); // Check if we are on skills.html
   html_contact = document.querySelector('.c-contact_text');
+  html_portfolio = document.querySelector('.c-portfolio_text'); // Check if we are on portfolio.html
   listenToMenuButtonOpen();
   listenToMenuButtonClose();
   listenToAllATags();
@@ -190,6 +199,16 @@ const init = () => {
       setMap()
     }
     listenToSubmit();
+    alertify.confirm('Contact', 'This page is only for representation and does not work due to the host.\nContact me @: ynse.vandenbilcke@icloud.com', function(){
+      alertify.success('Understood')
+    }, function(){
+      alertify.error('Cancel');
+    })
+  }
+  if(html_portfolio){
+    if(window.mobileCheck()){ // Check if we are on mobile
+      pulseIcons(document.querySelectorAll('.icon'));
+    }
   }
 }
 

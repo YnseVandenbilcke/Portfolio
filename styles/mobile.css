@@ -392,6 +392,10 @@ body{
 #map {
   display: none;
 }
+
+.alertify .ajs-dialog{
+  margin: 10% auto;
+}
 /* End styling for contact.html */
 
 /* Start styling for skills.html */
@@ -649,8 +653,34 @@ body{
   font-family: PublicSansLight;
 }
 
+.c-portfolio_text a {
+  color: #ee3557;
+}
+
+.c-portfolio_text a p{
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: PublicSansLight;
+}
+
 .c-portfolio_text a{
   text-decoration: none;
   color: #ee3557;
+}
+
+.c-portfolio_project {
+  display: flex;
+  margin-top: 16px;
+}
+
+.c-portfolio_project_text{
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.c-portfolio_project i {
+  color: #ee3557;
+  font-size: 3.6rem;
 }
 /* End styling for portfolio.html */
