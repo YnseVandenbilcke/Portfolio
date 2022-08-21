@@ -206,9 +206,7 @@ const init = () => {
     })
   }
   if(html_portfolio){
-    if(window.mobileCheck()){ // Check if we are on mobile
-      pulseIcons(document.querySelectorAll('.icon'));
-    }
+    pulseIcons(document.querySelectorAll('.icon'));
   }
 }
 

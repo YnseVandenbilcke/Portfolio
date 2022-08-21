@@ -455,6 +455,14 @@ body {
 /* End styling for skills.html */
 
 /* Begin styling for portfolio.html */
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.grid-item{
+  padding: 20px 0 20px 0;
+}
 
 .c-portfolio_text h1{
   color: #2CFED6;
@@ -469,10 +477,76 @@ body {
   font-family: PublicSansLight;
 }
 
+.c-portfolio_text a {
+  color: #ee3557;
+}
+
+.c-portfolio_text a p{
+  color: #FFFFFF;
+  font-size: 20px;
+  font-family: PublicSansLight;
+  display: flex;
+  justify-content: space-around;
+}
+
 .c-portfolio_text a{
   text-decoration: none;
   color: #ee3557;
 }
+
+.c-portfolio_project {
+  display: flex;
+  margin-top: 16px;
+  flex-direction: column;
+}
+
+.c-portfolio_project_text{
+  display: flex;
+  align-items: center;
+  padding: 16px;
+}
+
+.c-portfolio_project i {
+  color: #ee3557;
+  font-size: 8rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.pulsate-fwd {
+	-webkit-animation: pulsate-fwd 0.5s ease-in-out 1 both;
+	        animation: pulsate-fwd 0.5s ease-in-out 1 both;
+}
+
+@-webkit-keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes pulsate-fwd {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
 
 /* End styling for portfolio.html */
 
