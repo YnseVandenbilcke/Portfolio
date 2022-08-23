@@ -624,7 +624,6 @@ body {
   padding: 0.8em 1.8em;
   margin-top: 18px;
   cursor: pointer;
-  z-index: 1;
   transition: .3s;
   text-align: center;
   overflow: hidden;
