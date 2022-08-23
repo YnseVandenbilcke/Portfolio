@@ -615,21 +615,41 @@ body {
 }
 
 .c-contact_form__button{
-  -webkit-appearance: none;
   color: #2CFED6;
-  background-color: #202020;
+  background-color: transparent;
+  position: relative;
   border: #2CFED6 2px solid;
   font-family: PublicSansLight;
   font-size: 16px;
-  padding: 8px;
+  padding: 0.8em 1.8em;
   margin-top: 18px;
   cursor: pointer;
-  transition: background-color 1s, color 1s;
+  z-index: 1;
+  transition: .3s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.c-contact_form__button::before {
+  content: '';
+  width: 0;
+  height: 400%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background: #2CFED6;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+ }
+
+.c-contact_form__button:hover::before{
+  width: 105%;
 }
 
 .c-contact_form__button:hover{
-  background-color: #2CFED6;
-  color: #FFFFFF;
+  color: #000000;
 }
 
 .c-main_container{
